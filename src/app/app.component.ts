@@ -20,6 +20,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
       this.getEmployees();
   }
+  
   public getEmployees(): void {
     this.employeeService.getEmployees().subscribe(
       (response:Employee[])=>{
