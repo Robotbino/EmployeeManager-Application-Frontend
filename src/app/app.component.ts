@@ -1,12 +1,35 @@
-import { Component } from '@angular/core';
+import { Employee } from './employee';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { EmployeeService } from './employee.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'EmployeeManager';
+export class AppComponent implements OnInit{
+  title = 'Employeemanager';
+  public employees?: Employee[];
+
+  constructor(private employeeService: EmployeeService){}
+
+  ngOnInit(): void {
+      this.getEmployees();
+  }
+  public getEmployees(): void {
+    this.employeeService.getEmployees().subscribe(
+      (response:Employee[])=>{
+        this.employees = response;
+        console.log(`Employees:`,response)
+      },
+      (error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    )
+  }
+
 }

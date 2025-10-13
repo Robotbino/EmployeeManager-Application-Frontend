@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+.nagivationBar{
+    flex:display;
+    justify-content: center;
+    align-content: center;
+    height: 4em;
+    background-color: rgb(53, 52, 52);
+    gap: 9em;
+}
+
+.nagivationBar .li{
+    color: white;
+}
+
