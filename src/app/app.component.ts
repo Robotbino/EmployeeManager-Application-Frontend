@@ -6,10 +6,12 @@ import { EmployeeService } from './employee.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgModel } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,CommonModule,FormsModule],
+  imports: [RouterOutlet,CommonModule,FormsModule,MatButtonModule, MatIconModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -107,9 +109,11 @@ export class AppComponent implements OnInit{
       togglerButton.setAttribute('data-target','#addEmployeeModal')
     }
     if(mode === 'delete'){
+       this.deleteEmployee = employee!;
       togglerButton.setAttribute('data-target','#deleteEmployeeModal')
     }
     if(mode === 'update'){
+      this.editEmployee = employee!;
       togglerButton.setAttribute('data-target','#updateEmployeeModal')
     }
     container?.appendChild(togglerButton);

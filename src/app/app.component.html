@@ -1,36 +1,41 @@
 <nav>
+   <div class="navbarElements">
+   <div class="navbar-title-container">
+      <label class="navbar-title">Employee Manager</label>
+   </div>
 
-  <div class="navbar-title-container d-flex align-items-center">
-    <label class="navbar-title mb-0">Employee Manager</label>
-  </div>
-
-  <button type="button" class="btn btn-primary" (click)="onOpenModal(null, 'add')">Add Employee</button>
-
-  <form class="form-inline my-2 my-lg-0 searchBar">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  </form>
-
+   <button type="button" class="addEmployeeBtn" (click)="onOpenModal(null, 'add')">Add Employee</button>
+   <button matFab extended>
+        <mat-icon>favorite</mat-icon>
+        Basic
+   </button>
+   <form class="searchBar">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+   </form>
+</div>
 </nav>
-<div class="container" id="main-container">
-  <div class="row">
-    <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
-      <div class="card m-b-30">
-        <div class="card-body row">
-          <div class="col-6">
-            <a href=""><img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-60"></a>
-          </div>
-          <div class="col-6 card-title align-self-center mb-0">
+<div id="main-container">
+   <div class="row">
+    <div *ngFor="let employee of employees">
+      <div class="subcard">
+        <div class="cardHearder">
+               <a href=""><img src="{{employee?.imageUrl}}" alt="" class="employeeProfile"></a>
+         </div>
+          <div class="nameJob">
             <h5>{{employee?.name}}</h5>
             <p class="m-0">{{employee?.jobTitle}}
             </p>
           </div>
-        </div>
+        
 
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a
-              href="#">{{employee?.email}}</a></li>
-          <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{employee?.phone}}</li>
-        </ul>
+        <div class="cardemployeeContactDetails">
+            <ul>
+               <li class=""><i class="fa fa-envelope float-right"></i>Email : <a
+                  href="#">{{employee?.email}}</a></li>
+               <li class=""><i class="fa fa-phone float-right"></i>Phone : {{employee?.phone}}</li>
+            </ul>
+         </div>
+
         <div class="card-body">
           <div class="float-right btn-group btn-group-sm">
             <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
@@ -48,6 +53,8 @@
                 data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
           </ul>
         </div>
+
+
       </div>
     </div>
   </div>
