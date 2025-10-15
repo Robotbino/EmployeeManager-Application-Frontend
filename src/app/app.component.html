@@ -3,15 +3,14 @@
    <div class="navbar-title-container">
       <label class="navbar-title">Employee Manager</label>
    </div>
-
-   <button type="button" class="addEmployeeBtn" (click)="onOpenModal(null, 'add')">Add Employee</button>
-   <button matFab extended>
-        <mat-icon>favorite</mat-icon>
-        Basic
+<div class="addPersonBlock">
+  <button mat-fab class="addEmployeeBtn" (click)="onOpenModal(null, 'add')">
+  <mat-icon>person_add</mat-icon>
    </button>
    <form class="searchBar">
       <input class="form-control" type="search" placeholder="Search" aria-label="Search">
    </form>
+</div>
 </div>
 </nav>
 <div id="main-container">
