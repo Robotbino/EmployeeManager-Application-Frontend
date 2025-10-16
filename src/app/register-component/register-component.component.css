@@ -1,0 +1,46 @@
+.registerPageContainer{
+    display: flex;
+    justify-content: start;
+    margin: 0 auto;
+    align-content: end;
+    flex-direction: column;
+    height: 900px;
+    width: 700px;
+   
+}
+
+
+a{
+    color: orange ;
+}
+
+
+.loginRegitserblock{
+    display: flex;
+    margin-top: 3.5em;
+    order: 1;
+}
+
+.tab-content{
+    display: flex;
+    order: 2;
+    justify-content: center;
+
+}
+
+.rememberMeBlock .form-check-input {
+  margin-right: 8px; /* Creates space between the checkbox and the label */
+}
+
+.rememberMeBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; /* Adjust this value for more/less space */
+}
+.forgotPassBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}

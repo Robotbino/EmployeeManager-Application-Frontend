@@ -7,9 +7,11 @@ import { CommonModule } from '@angular/common';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { AppRoutingModule } from "../app-routing.module";
 @Component({
   selector: 'app-home-component',
-  imports: [ FormsModule, CommonModule, FormsModule, MatButtonModule, MatIconModule],
+  standalone:false,
+
   templateUrl: './home-component.component.html',
   styleUrl: './home-component.component.css'
 })

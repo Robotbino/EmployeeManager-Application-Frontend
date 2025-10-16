@@ -8,11 +8,19 @@ import { MatButtonModule,  } from '@angular/material/button';
 import { EmployeeService } from './employee.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
+import { RegisterComponentComponent } from './register-component/register-component.component';
+import { MatIcon } from "@angular/material/icon";
+import { LoginComponentComponent } from './login-component/login-component.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponentComponent,
+    RegisterComponentComponent,
+    LoginComponentComponent,
   ], 
   imports: [
     MatButtonModule,
@@ -22,8 +30,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     CommonModule,
     MatButtonModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    MatIcon
+],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
