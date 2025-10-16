@@ -1,17 +1,19 @@
 import { Employee } from './employee';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgModel } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from "../../node_modules/@angular/router/router_module.d-Bx9ArA6K";
+import { RegisterComponentComponent } from './register-component/register-component.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,CommonModule,FormsModule,MatButtonModule, MatIconModule],
+  imports: [ CommonModule, RegisterComponentComponent,
+              FormsModule, MatButtonModule, MatIconModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -25,7 +27,7 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(): void {
-      this.getEmployees();
+      //this.getEmployees();
   }
   
   public getEmployees(): void {

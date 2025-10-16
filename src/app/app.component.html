@@ -1,18 +1,24 @@
 <nav>
-   <div class="navbarElements">
-   <div class="navbar-title-container">
-      <label class="navbar-title">Employee Manager</label>
-   </div>
-<div class="addPersonBlock">
-  <button mat-fab class="addEmployeeBtn" (click)="onOpenModal(null, 'add')">
-  <mat-icon>person_add</mat-icon>
-   </button>
-   <form class="searchBar">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-   </form>
-</div>
-</div>
+  <div class="navbarElements">
+      <div class="navbar-title-container">
+         <label class="navbar-title navbar-brand">Employee Manager</label>
+      </div>
+      <div class="addPersonBlock">
+         <button mat-fab class="addEmployeeBtn" (click)="onOpenModal(null, 'add')">
+            <mat-icon>
+               person_add
+            </mat-icon>
+         </button>
+          <button mat-fab class="addEmployeeBtn" routerLink="/register">
+           
+         </button>
+         <form class="searchBar">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+         </form>
+      </div>
+  </div>
 </nav>
+
 <div id="main-container">
    <div class="row">
     <div *ngFor="let employee of employees">
