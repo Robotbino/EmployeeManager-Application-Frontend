@@ -9,11 +9,11 @@
                person_add
             </mat-icon>
          </button>
-           <button mat-fab class="addEmployeeBtn" routerLink="/register">
-            <mat-icon>
-              
-            </mat-icon>
+           
+         <button mat-fab class="addEmployeeBtn" routerLink="/login">
+           Oops!
          </button>
+
          <form class="searchBar">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
          </form>
@@ -45,10 +45,10 @@
 
         <div class="card-body">
           <div class="float-right btn-group btn-group-sm">
-            <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
+            <a class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
               data-original-title="Edit"
               (click)="onOpenModal(employee, 'update')"><i class="fa fa-pencil"></i> </a>
-            <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip"
+            <a  class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip"
               data-original-title="Delete" (click)="onOpenModal(employee, 'delete')"><i class="fa fa-times"></i></a>
           </div>
           <ul class="social-links list-inline mb-0">

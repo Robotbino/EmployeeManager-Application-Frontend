@@ -1,4 +1,6 @@
-/* ===== CSS VARIABLES ===== */
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
 :root {
  --ff: "Inter", sans-serif;
   --h1: bold 4rem/1em var(--ff);

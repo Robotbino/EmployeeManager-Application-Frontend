@@ -7,15 +7,14 @@ import { CommonModule } from '@angular/common';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { AppRoutingModule } from "../app-routing.module";
+import { OnInit } from '@angular/core';
 @Component({
   selector: 'app-home-component',
   standalone:false,
-
   templateUrl: './home-component.component.html',
   styleUrl: './home-component.component.css'
 })
-export class HomeComponentComponent {
+export class HomeComponentComponent implements OnInit {
 
   public employees!: Employee[];
   public editEmployee?: Employee;
@@ -56,7 +55,6 @@ export class HomeComponentComponent {
   }
 
   public onUpdateEmloyee(employee: Employee): void {
-    console.log("We do trigger the method");
     this.employeeService.updateEmployees(employee).subscribe(
       (response: Employee) => {
         console.log(response);
@@ -96,6 +94,7 @@ export class HomeComponentComponent {
       this.getEmployees();
     }
   }
+
 
   public onOpenModal(employee: Employee | null,mode: string){
     const container = document.getElementById("main-container");

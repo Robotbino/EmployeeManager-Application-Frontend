@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,7 +31,7 @@ import { LoginComponentComponent } from './login-component/login-component.compo
     CommonModule,
     MatButtonModule,
     AppRoutingModule,
-    MatIcon
+    MatIcon,
 ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

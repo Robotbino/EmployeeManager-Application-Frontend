@@ -1,48 +1,196 @@
-.registerPageContainer{
-    display: flex;
-    justify-content: start;
-    margin: 0 auto;
-    align-content: end;
+/* ====== Layout ====== */
+.login-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+.login-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.login-image-container {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.login-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* ====== Form ====== */
+.login-form-container {
+  flex: 1 1 45%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== Social Login ====== */
+.social-login {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-login-title {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.social-btn {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+.fb-btn { background-color: #3b5998; }
+.twitter-btn { background-color: #55acee; }
+.linkedin-btn { background-color: #0077b5; }
+
+/* ====== Divider ====== */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.divider-text {
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+/* ====== Form Fields ====== */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+/* ✅ Slightly smaller inputs (minimal modification) */
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem; /* smaller vertical padding */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;        /* slightly smaller text */
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ====== Remember/Forgot ====== */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-checkbox {
+  margin-right: 0.5rem;
+}
+
+.forgot-password-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* ====== Submit Section ====== */
+.login-submit {
+  text-align: center;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+.register-text {
+  margin-top: 1rem;
+}
+
+.register-link {
+  color: #dc3545;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* ====== Responsiveness ====== */
+@media (max-width: 768px) {
+  .login-row {
     flex-direction: column;
-    height: 900px;
-    width: 700px;
-   
-}
+  }
 
-*{
-    color: white;
-}
-a{
-    color: orange ;
-}
-
-
-.loginRegitserblock{
-    display: flex;
-    margin-top: 3.5em;
-    order: 1;
-}
-
-.tab-content{
-    display: flex;
-    order: 2;
-    justify-content: center;
-
-}
-
-.rememberMeBlock .form-check-input {
-  margin-right: 8px; /* Creates space between the checkbox and the label */
-}
-
-.rememberMeBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center; /* Adjust this value for more/less space */
-}
-.forgotPassBlock{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  .login-image-container,
+  .login-form-container {
+    flex: 1 1 100%;
+  }
 }
