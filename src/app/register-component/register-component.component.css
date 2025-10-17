@@ -9,7 +9,9 @@
    
 }
 
-
+*{
+    color: white;
+}
 a{
     color: orange ;
 }

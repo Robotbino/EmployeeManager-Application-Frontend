@@ -110,7 +110,7 @@ export class HomeComponentComponent {
       togglerButton.setAttribute('data-target','#addEmployeeModal')
     }
     if(mode === 'delete'){
-       this.deleteEmployee = employee!;
+      this.deleteEmployee = employee!;
       togglerButton.setAttribute('data-target','#deleteEmployeeModal')
     }
     if(mode === 'update'){
