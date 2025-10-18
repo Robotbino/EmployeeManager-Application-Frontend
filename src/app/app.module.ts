@@ -12,7 +12,9 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { RegisterComponentComponent } from './register-component/register-component.component';
 import { MatIcon } from "@angular/material/icon";
 import { LoginComponentComponent } from './login-component/login-component.component';
-
+import { AuthService } from './auth-service.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth.interceptor';
 
 
 @NgModule({
@@ -33,7 +35,12 @@ import { LoginComponentComponent } from './login-component/login-component.compo
     AppRoutingModule,
     MatIcon,
 ],
-  providers: [EmployeeService],
+  providers: [EmployeeService,AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
