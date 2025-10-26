@@ -10,8 +10,10 @@
   --grey100: hsl(0%,0%,100%);
   --grey75: hsl(0%,0%,75%);
   --grey50: hsl(0%,0%,50%);
+  --bg-alt:#31465b;
   --bg-color: #2c3e50;
   --navbar-bg: #24292e;
+  --accent-color: #007bff;
 }
 
 * {
@@ -22,6 +24,7 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
+  color: white;
 }
 
 body {

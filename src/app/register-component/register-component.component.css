@@ -23,23 +23,28 @@
 }
 
 .login-image-container {
-  flex: 1 1 45%;
+  flex: 1;
   display: flex;
+  gap:2px; 
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 }
 
 .login-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+  display: flex;
+  width: 480px;
+  height: 350px;
 }
 
 /* ====== Form ====== */
 .login-form-container {
-  flex: 1 1 45%;
-  background-color: #ffffff;
+  flex: 1 ;
+  height: 550px;
+  width: 500px;
+  border: 1px solid #ccc;
+  color: white;
+  background-color: var(--bg-alt);
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -112,27 +117,33 @@
 
 .form-label {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
   font-weight: 500;
+  color: #e0e0e0;
 }
 
-/* ✅ Slightly smaller inputs (minimal modification) */
+
 .form-input {
   width: 100%;
-  padding: 0.5rem 0.75rem; /* smaller vertical padding */
-  border: 1px solid #ced4da;
+  padding: 0.5rem 0.75rem; 
+  border: 2px solid #ced4da;
   border-radius: 4px;
-  font-size: 0.9rem;        /* slightly smaller text */
+  font-size: 0.9rem;       
+  background-color: var(--bg-alt);
 }
-
+.form-input::placeholder{
+  color: #adb5bd;
+  
+}
 .form-input:focus {
-  border-color: #007bff;
+  border-color: orange;
   outline: none;
 }
 
 /* ====== Remember/Forgot ====== */
 .form-options {
   display: flex;
+  color: orange;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -143,8 +154,8 @@
 }
 
 .forgot-password-link {
-  text-decoration: none;
-  color: #007bff;
+  text-decoration: underline;
+  color: orange;
 }
 
 .forgot-password-link:hover {
@@ -157,17 +168,20 @@
 }
 
 .login-btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+
+   width: 100%;
+    padding: 0.75rem;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
 }
+ 
 
 .login-btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(219, 142, 0);
 }
 
 .register-text {
