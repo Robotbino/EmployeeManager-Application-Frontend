@@ -98,20 +98,20 @@ body {
 
 .navbar-title {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 900;
   color: #24292e;
   letter-spacing: 0.15em; 
   font-family: 'Atkinson Hyperlegible', sans-serif;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 3px white;
   paint-order: stroke fill;
   text-transform: uppercase;
   margin: 0;
   white-space: nowrap;
 }
 .row{
-    display: flex;
-    gap: 3em;
-    padding-left: 4em;
+  display: flex;
+  gap: 3em;
+  padding-left: 4em;
 }
 
 
