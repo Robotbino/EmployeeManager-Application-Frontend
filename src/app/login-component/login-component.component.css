@@ -84,3 +84,10 @@ a{
     font-size: 1rem;
     cursor: pointer;
 }
+
+.form-input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px var(--bg-alt) inset !important;
+  -webkit-text-fill-color: white !important;
+  border: 2px solid orange !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
