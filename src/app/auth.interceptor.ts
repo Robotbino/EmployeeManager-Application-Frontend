@@ -49,6 +49,6 @@ export class AuthInterceptor implements HttpInterceptor {
    * Check if the request is to an authentication endpoint
    */
   private isAuthEndpoint(url: string): boolean {
-    return url.includes('/api/v1/auth/register') || url.includes('/api/v1/auth/authenticate');
+    return url.includes('/api/v1/auth/register');
   }
 }
