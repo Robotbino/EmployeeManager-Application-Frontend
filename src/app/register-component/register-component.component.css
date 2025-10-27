@@ -125,6 +125,7 @@
 
 .form-input {
   width: 100%;
+  color: white;
   padding: 0.5rem 0.75rem; 
   border: 2px solid #ced4da;
   border-radius: 4px;
@@ -137,7 +138,19 @@
 }
 .form-input:focus {
   border-color: orange;
+  background-color: var(--bg-alt) !important;
   outline: none;
+}
+
+
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus,
+.form-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--bg-alt) inset !important;
+  -webkit-text-fill-color: white !important;
+  border: 2px solid orange !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* ====== Remember/Forgot ====== */
