@@ -19,6 +19,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -36,51 +37,51 @@ body {
 }
 
 .navbarElements{
-    display:flex;
-    background-color: var(--navbar-bg);
-    padding: 16px 32px;
-    gap: 4px;
-    justify-content: space-between;
-    flex-direction: row;
-    color: white;
+  display:flex;
+  background-color: var(--navbar-bg);
+  padding: 16px 32px;
+  gap: 4px;
+  justify-content: space-between;
+  flex-direction: row;
+  color: white;
 }
 
 .searchBar .form-control {
-    background-color: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    color: #c9d1d9;
-    padding: 5px 12px;
-    font-size: 14px;
-    width: 272px;
-    transition: all 0.2s ease;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  padding: 5px 12px;
+  font-size: 14px;
+  width: 272px;
+  transition: all 0.2s ease;
 }
 
 .searchBar .form-control::placeholder {
-    display: flex;
-    justify-content: end;
-    color: #8b949e;
+  display: flex;
+  justify-content: end;
+  color: #8b949e;
 }
 
 .searchBar .form-control:focus {
-    background-color: #0d1117;
-    border-color: #58a6ff;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
-    color: #c9d1d9;
+  background-color: #0d1117;
+  border-color: #58a6ff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+  color: #c9d1d9;
 }
 
 /* Add search icon inside input */
 .searchBar {
-   display: flex;
+  display: flex;
 }
 
 .searchBar .form-control {
-    padding-left: 32px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238b949e' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: 8px center;
-    background-size: 16px;
+  padding-left: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238b949e' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 16px;
 }
 
 .navbar-title-container {
@@ -108,10 +109,23 @@ body {
   margin: 0;
   white-space: nowrap;
 }
-.row{
+
+/* Fixed row styling for full-width responsive layout */
+.row {
+  margin: 2em auto;
+  padding: 0 2em;
   display: flex;
-  gap: 3em;
-  padding-left: 4em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  max-width: 100%;
+  width: 100%;
 }
 
-
+/* For larger screens, you can set a max-width if desired */
+@media (min-width: 1400px) {
+  .row {
+    max-width: 1400px;
+  }
+}

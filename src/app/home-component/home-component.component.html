@@ -33,9 +33,18 @@
 
         <div class="cardemployeeContactDetails">
             <ul>
-               <li ><i class="fa fa-envelope float-right"></i>Email : <a
-                  href="#">{{employee?.email}}</a></li>
-               <li><i class="fa fa-phone float-right"></i>Phone : {{employee?.phone}}</li>
+               <li>
+                     <span class="contact-info">
+                        Email : <a href="#">{{employee?.email}}</a>
+                     </span>
+                     <i class="fa fa-envelope"></i>
+               </li>
+               <li>
+                     <span class="contact-info">
+                        Phone : {{employee?.phone}}
+                     </span>
+                     <i class="fa fa-phone"></i>
+               </li>
             </ul>
          </div>
 
