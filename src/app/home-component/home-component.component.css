@@ -42,8 +42,8 @@ i{
 }
 
 .employeeProfile{
-    border-radius: 55px;
-    width: 7.5em;
+    border-radius: 50%;
+    width: 8.5em;
 }
 .cardHearder{
     display: flex;
