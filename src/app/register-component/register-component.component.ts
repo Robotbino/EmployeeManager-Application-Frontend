@@ -31,6 +31,7 @@ export class RegisterComponentComponent {
     this.errorMessage = '';
     this.isLoading = true;
     console.log("Register button clicked");
+    console.log(this.registerData);
     this.authService.register(this.registerData).subscribe({
       next: (response) => {
         console.log('Registration successful', response);

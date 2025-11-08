@@ -7,15 +7,15 @@
           {{ errorMessage }}
         </div>
       
-        <div data-mdb-input-init class="form-outline mb-4">
-          <input type="email" id="loginName" placeholder="Please enter your email"  class="form-input" />
-          <label class="form-label"  for="loginName">Email or username</label>
+         <div data-mdb-input-init class="form-outline mb-4">
+          <input type="email" id="loginName" placeholder="Please enter your email" class="form-input" [(ngModel)]="loginData.email" name="email" required />
+          <label class="form-label" for="loginName">Email or username</label>
         </div>
 
 
         <div data-mdb-input-init class="form-outline">
-          <input type="password" id="loginPassword"   placeholder="Please enter your password"  class="form-input" />
-          <label class="form-label"  for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Please enter your password" class="form-input" [(ngModel)]="loginData.password" name="password" required />
+          <label class="form-label" for="loginPassword">Password</label>
         </div>
 
 

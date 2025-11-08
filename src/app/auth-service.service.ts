@@ -16,7 +16,7 @@ export interface AuthenticationRequest {
 }
 
 export interface AuthenticationResponse {
-  token: string;
+  access_token: string;
   email?: string;
   firstName?: string;
   lastName?: string;
@@ -59,12 +59,12 @@ export class AuthService {
   /**
    * Store token and update subject
    */
-  private handleAuthenticationSuccess(response: AuthenticationResponse): void {
-    if (response.token) {
-      localStorage.setItem('auth_token', response.token);
-      this.tokenSubject.next(response.token);
-    }
+ private handleAuthenticationSuccess(response: AuthenticationResponse): void {
+  if (response.access_token) {
+    localStorage.setItem('auth_token', response.access_token);
+    this.tokenSubject.next(response.access_token);
   }
+}
 
   
 
