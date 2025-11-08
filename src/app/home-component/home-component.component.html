@@ -37,29 +37,29 @@
                <ul>
                   <li>
                      <span class="contact-info">
-                        Email : <a href="#">{{employee?.email}}</a>
+                       <a href="#">{{employee?.email}}</a>
                      </span>
                      <i class="fa fa-envelope"></i>
                   </li>
                   <li>
                      <span class="contact-info">
-                        Phone : {{employee?.phone}}
+                      {{employee?.phone}}
                      </span>
                      <i class="fa fa-phone"></i>
                   </li>
                </ul>
             </div>
-
-            <div class="card-body">
-               <div class="float-right btn-group btn-group-sm">
+            <div class="float-right btn-group btn-group-sm">
                   <a class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
                      data-original-title="Edit" (click)="onOpenModal(employee, 'update')"><i class="fa fa-pencil"></i>
                   </a>
                   <a class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip"
                      data-original-title="Delete" (click)="onOpenModal(employee, 'delete')"><i
                         class="fa fa-times"></i></a>
-               </div>
-               <ul class="social-links list-inline mb-0">
+            </div>
+            <div class="card-body">
+               
+               <ul class="social-links list-inline mb-0 text-center">
                   <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips"
                         href="" data-original-title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
                   <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips"
