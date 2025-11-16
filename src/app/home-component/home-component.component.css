@@ -1,71 +1,120 @@
 
 .social-links li a {
-    -webkit-border-radius: 50%;
-    background-color: rgba(33, 33, 33, 0.85);
-    border-radius: 50%;
-    color: #fff;
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    width: 30px;
-    font-size: 18px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    font-size: 16px;
+    transition: all var(--transition-base);
+}
+
+.social-links li a:hover {
+    background-color: var(--blue-500);
+    border-color: var(--blue-500);
+    color: var(--text-inverse);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
 }
 
 a{
-    color: #b2b2b2;
+    color: var(--blue-500);
+    text-decoration: none;
+    transition: color var(--transition-base);
 }
+
+a:hover {
+    color: var(--blue-600);
+    text-decoration: underline;
+}
+
 i{
-    color: white;
+    color: var(--text-secondary);
 }
 
 .subcard{
     display: flex;
-    margin-top: 1.5em;
     width: 350px;
     min-height: 440px;
     flex-direction: column;
-    gap: 10px;
-    padding: 4px;
-    background-color: rgba(45, 53, 53, 0.4);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background-color: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
 }
+
+.subcard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue-500) 0%, var(--blue-600) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
 .subcard:hover{
-    transform: scale(1.005);
-    background-color: var(--bg-alt);
-    transition: all 0.1s ease-in-out;
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--border-medium);
+}
+
+.subcard:hover::before {
+    opacity: 1;
 }
 
 .employeeProfile{
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     width: 8.5em;
+    height: 8.5em;
+    object-fit: cover;
+    border: 3px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
 }
+
+.subcard:hover .employeeProfile {
+    border-color: var(--blue-500);
+    box-shadow: var(--shadow-md);
+}
+
 .cardHearder{
     display: flex;
-    margin-top: 1.5em;
     justify-content: center;
+    padding-top: var(--space-md);
 }
 .cardemployeeContactDetails{
-    display:flex;
+    display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     min-height: 100px;
     justify-content: flex-start;
-    padding: 2em 1em;
-    border-radius: 4px;
-    background-color: rgb(35, 35, 35);
-
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
 }
 .cardemployeeContactDetails li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    margin-bottom: 0.5em;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+    gap: var(--space-md);
+    font-size: var(--text-sm);
 }
 
 .cardemployeeContactDetails ul {
@@ -75,8 +124,9 @@ i{
     width: 100%;
 }
 .cardemployeeContactDetails li i {
-    color: white;
-    min-width: 20px; 
+    color: var(--blue-500);
+    min-width: 20px;
+    font-size: 16px;
 }
 .cardemployee{
     display: flex;
@@ -87,21 +137,76 @@ i{
 }
 
 .nameJob{
-    margin-left: 1.5em;
-    color: #C1BDB3;
+    text-align: center;
+    margin-top: var(--space-sm);
+}
+
+.nameJob h5 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-xs) 0;
+    letter-spacing: -0.01em;
+}
+
+.nameJob p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 
 .addEmployeeBtn{
-    background-color: #2c3e50;
-    color: white;
-    border-radius: 100%;
-    width:48px;
+    background-color: var(--blue-500);
+    color: var(--text-inverse);
+    border-radius: var(--radius-full);
+    width: 48px;
     height: 48px;
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
 }
+
+.addEmployeeBtn:hover {
+    background-color: var(--blue-600);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.addEmployeeBtn:active {
+    transform: scale(0.98);
+}
+
 .addPersonBlock{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3.5em;
+    gap: var(--space-lg);
+}
+
+/* Button Group Styling */
+.btn-group {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.btn-group .btn {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-sm);
+    min-width: 36px;
+    height: 36px;
+}
+
+.btn-group .btn i {
+    color: inherit;
+}
+
+.tooltips {
+    position: relative;
+}
+
+.float-right {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
 }

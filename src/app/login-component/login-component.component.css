@@ -2,23 +2,30 @@
 
 .signinBlock{
     display: flex;
-    background-color: var(--bg-alt);
-    padding: 2em 0em;
-    border: 2px solid grey;
-    border-radius: 12px;
+    background-color: var(--surface);
+    padding: var(--space-2xl);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
     justify-content: center;
-    margin-top: 1.2em;
+    margin-top: var(--space-lg);
     width: 450px;
+    box-shadow: var(--shadow-lg);
 }
 
 a{
-    color: orange ;
+    color: var(--blue-500);
+    transition: color var(--transition-base);
+}
+
+a:hover {
+    color: var(--blue-600);
 }
 
 .loginRegitserblock{
     display: flex;
     justify-items: center;
-    margin-top: 3.5em;
+    margin-top: var(--space-2xl);
+    color: var(--text-secondary);
 }
 
 .container{
@@ -28,66 +35,87 @@ a{
     flex-direction: column;
     min-width: 100vw;
     min-height: 100vh;
-    color: white;
+    color: var(--text-primary);
 }
 
 .form-input{
   width: 100%;
-  padding: 0.5rem 0.75rem; 
-  color: white;
-  border: 2px solid #ced4da;
-  border-radius: 4px;
-  font-size: 0.9rem;       
-  background-color: var(--bg-alt);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-family: var(--ff-primary);
+  background-color: var(--bg-primary);
+  transition: all var(--transition-base);
 }
 
 .form-input::placeholder{
-  color: #adb5bd;
-  
+  color: var(--text-tertiary);
 }
+
 .form-input:focus {
-  border-color: orange;
+  border-color: var(--blue-500);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 
 .rememberMeBlock .form-check {
     display: flex;
     margin: 0;
-    align-items: center; 
+    align-items: center;
 }
+
 .rememberMeBlock .form-check-label {
-    padding: 5px;
+    padding: var(--space-xs);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
 }
 
 .rememberMeBlock {
     display: flex;
-    margin-bottom: 10px;
-    gap: 10px;
+    margin-bottom: var(--space-md);
+    gap: var(--space-sm);
     flex-direction: row;
-    justify-content: space-between;;
+    justify-content: space-between;
 }
+
 .forgotPassBlock{
     display: flex;
     justify-content: center;
     align-content: center;
-    gap: 20px;
+    gap: var(--space-lg);
     align-items: center;
 }
+
 .btn-SignIn{
     width: 100%;
-    padding: 0.75rem;
-    background-color: orange;
-    color: white;
+    padding: var(--space-md);
+    background-color: var(--blue-500);
+    color: var(--text-inverse);
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-weight: 500;
     cursor: pointer;
+    transition: all var(--transition-base);
+    font-family: var(--ff-primary);
+}
+
+.btn-SignIn:hover {
+    background-color: var(--blue-600);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-SignIn:active {
+    transform: translateY(0);
 }
 
 .form-input:-webkit-autofill{
-  -webkit-box-shadow: 0 0 0 30px var(--bg-alt) inset !important;
-  -webkit-text-fill-color: white !important;
-  border: 2px solid orange !important;
+  -webkit-box-shadow: 0 0 0 30px var(--bg-primary) inset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  border: 1px solid var(--blue-500) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
