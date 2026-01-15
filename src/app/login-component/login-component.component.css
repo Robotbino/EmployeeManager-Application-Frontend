@@ -2,14 +2,7 @@
 
 .signinBlock{
     display: flex;
-    background-color: var(--surface);
-    padding: var(--space-2xl);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
     justify-content: center;
-    margin-top: var(--space-lg);
-    width: 450px;
-    box-shadow: var(--shadow-lg);
 }
 
 a{
@@ -28,6 +21,12 @@ a:hover {
     color: var(--text-secondary);
 }
 
+.loginImage{
+  width:100px;
+  height: 100;
+  border-radius: 100%;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -36,6 +35,14 @@ a:hover {
     min-width: 100vw;
     min-height: 100vh;
     color: var(--text-primary);
+}
+
+.welcomeMsg{
+    display: inline;
+    align-items: start;
+    margin-top: var(--space-md);
+    font-size: var(--text-lg);
+    font-weight: bold;
 }
 
 .form-input{
@@ -91,13 +98,13 @@ a:hover {
 
 .btn-SignIn{
     width: 100%;
-    padding: var(--space-md);
+    padding: var(--space-sm);
     background-color: var(--blue-500);
     color: var(--text-inverse);
     border: none;
     border-radius: var(--radius-md);
-    font-size: var(--text-base);
-    font-weight: 500;
+    font-size: var( --text-lg);
+    font-weight: 1.5rem;
     cursor: pointer;
     transition: all var(--transition-base);
     font-family: var(--ff-primary);

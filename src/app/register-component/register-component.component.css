@@ -1,3 +1,4 @@
+
 .login-section {
   min-height: 100vh;
   display: flex;
@@ -5,11 +6,11 @@
 }
 
 .login-container {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem;
+  gap:20px;
+  background-color:var(--bg-secondary);
 }
 
 .login-row {
@@ -17,14 +18,13 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  width: 100%;
+  width: 80%;
 }
 
 .login-image-container {
   flex: 1;
   display: flex;
-  gap:2px; 
+  gap:6px; 
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
@@ -36,21 +36,34 @@
   height: 350px;
 }
 
+.btn-register{
+  position: absolute;
+  top:-10;
+  right: 160px;
+  width:300px;
+  margin-top: 1rem;
+  border:3px solid black;
+  background-color: white;
+  height: 40px;
+  border-radius: 0.5rem;
+}
 
 .login-form-container {
   flex: 1 ;
-  height: 550px;
-  width: 500px;
-  border: 1px solid #ccc;
-  color: white;
-  background-color: var(--bg-alt);
+  height: 80vh;
+  width: 400px;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
   padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 5rem;
+  border-radius:1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
+  color: var(--text-primary);
 }
 
 .social-login {
@@ -115,18 +128,18 @@
   display: block;
   margin-bottom: 0.2rem;
   font-weight: 500;
-  color: #e0e0e0;
+  color: var(--text-primary);
 }
 
 
 .form-input {
-  width: 100%;
+  width:100%;
   color: white;
   padding: 0.5rem 0.75rem; 
-  border: 2px solid #ced4da;
+  border: 2px solid #a7abae;
   border-radius: 4px;
   font-size: 0.9rem;       
-  background-color: var(--bg-alt);
+  background-color: var(--bg-secondary);
 }
 .form-input::placeholder{
   color: #adb5bd;
@@ -151,7 +164,7 @@
 
 .form-options {
   display: flex;
-  color: orange;
+  color:var(--blue-600);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -163,7 +176,7 @@
 
 .forgot-password-link {
   text-decoration: underline;
-  color: orange;
+  color: var(--blue-600);
 }
 
 .forgot-password-link:hover {
@@ -176,19 +189,19 @@
 
 .login-btn {
 
-   width: 100%;
-    padding: 0.75rem;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
+  width: 60%;
+  padding: 0.75rem;
+  background-color: var(--blue-600);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
 }
  
 
 .login-btn:hover {
-  background-color: rgb(219, 142, 0);
+  background-color: var(--blue-700);
 }
 
 .register-text {
@@ -196,7 +209,8 @@
 }
 
 .register-link {
-  color: #dc3545;
+  color: black;
+  font-weight: bolder;
   text-decoration: none;
 }
 

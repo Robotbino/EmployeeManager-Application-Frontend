@@ -1,5 +1,10 @@
 <section class="login-section">
+   <button class="btn-register">
+              Already have an account?
+              <a routerLink="/login" class="register-link">Log In</a>
+   </button>
   <div class="login-container">
+    
     <div class="login-row">
 
       <div class="login-image-container">
@@ -11,7 +16,6 @@
         
         <form class="login-form" (ngSubmit)="onRegister()">
 
-        
           <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
             {{ errorMessage }}
           </div>
@@ -57,12 +61,6 @@
             <button type="submit" class="login-btn" [disabled]="isLoading">
               {{ isLoading ? 'Registering...' : 'Register' }}
             </button>
-
-        
-            <p class="register-text">
-              Already have an account?
-              <a routerLink="/login" class="register-link">Login</a>
-            </p>
           </div>
 
         </form>
