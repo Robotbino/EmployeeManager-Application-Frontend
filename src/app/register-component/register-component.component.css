@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-secondary);
 }
 
 .login-container {
@@ -134,7 +135,7 @@
 
 .form-input {
   width:100%;
-  color: white;
+  color: var(--grey-500);
   padding: 0.5rem 0.75rem; 
   border: 2px solid #a7abae;
   border-radius: 4px;
@@ -146,8 +147,8 @@
   
 }
 .form-input:focus {
-  border-color: orange;
-  background-color: var(--bg-alt) !important;
+  border-color: var(--grey-50);
+  background-color: var(--bg-secondary) !important;
   outline: none;
 }
 
@@ -156,9 +157,9 @@
 .form-input:-webkit-autofill:hover,
 .form-input:-webkit-autofill:focus,
 .form-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px var(--bg-alt) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--bg-secondary) inset !important;
   -webkit-text-fill-color: white !important;
-  border: 2px solid orange !important;
+  border: 2px solid var(--grey-50) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -194,7 +195,7 @@
   background-color: var(--blue-600);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.75rem;
   font-size: 1rem;
   cursor: pointer;
 }
